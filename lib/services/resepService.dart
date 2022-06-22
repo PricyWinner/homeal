@@ -20,9 +20,9 @@ Future<void> firebaseinit() async {
       var bahan_name = data['name'].toString();
       int bahan_price = data['price'];
       var bahan_weight = data['weight'].toString();
-
-      listBahan.add(BahanClass(
-          bahan_id.toString(), bahan_name, bahan_price, bahan_weight));
+      var bahan_imageURL = data['imageURL'].toString();
+      listBahan.add(BahanClass(bahan_id.toString(), bahan_name, bahan_price,
+          bahan_weight, bahan_imageURL));
     }
   }
 

@@ -13,10 +13,11 @@ class ItemClass {
 
 class BahanClass {
   String id;
+  String imageURL;
   String name;
   int price;
   String weight;
-  BahanClass(this.id, this.name, this.price, this.weight);
+  BahanClass(this.id, this.name, this.price, this.weight, this.imageURL);
 }
 
 class BahanAmountClass {

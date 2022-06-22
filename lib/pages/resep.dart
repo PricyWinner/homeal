@@ -95,7 +95,13 @@ class ResepPage extends StatelessWidget {
                         Padding(
                           padding: const EdgeInsets.all(10.0),
                           child: ElevatedButton(
-                            onPressed: () => {},
+                            onPressed: () => {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => ChooseStorePage(bahan: getBahan(),)),
+                              ),
+                            },
                             child: Text("Shop Ingredients"),
                           ),
                         )

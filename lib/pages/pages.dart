@@ -8,3 +8,4 @@ part 'home.dart';
 part 'resep.dart';
 part 'chooseStore.dart';
 part 'test.dart';
+part 'shopIngredients.dart';

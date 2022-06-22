@@ -21,6 +21,8 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   get selectedResep => null;
 
+  get bahan => null;
+
   @override
   void initState() {
     // firebaseinit();
@@ -35,7 +37,9 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(initialRoute: '/', routes: {
       '/': (context) => HomePage(),
       '/resep': (context) => ResepPage(selectedResep: selectedResep),
-      '/store': (context) => ChooseStorePage(),
+      '/store': (context) => ChooseStorePage(
+            bahan: bahan,
+          ),
     });
   }
 }

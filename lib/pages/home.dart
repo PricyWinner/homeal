@@ -132,12 +132,12 @@ class _BottomNavBarState extends State<BottomNavBar> {
       _selectedIndex = index;
       if (_selectedIndex == 3) {
         print(listResep.elementAt(0).category);
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => ChooseStorePage(),
-          ),
-        );
+        // Navigator.push(
+        //   context,
+        //   MaterialPageRoute(
+        //     builder: (context) => ChooseStorePage(),
+        //   ),
+        // );
       }
     });
   }
