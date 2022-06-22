@@ -27,6 +27,10 @@ class ResepPage extends StatelessWidget {
             length: 2,
             child: Scaffold(
                 appBar: AppBar(
+                  leading: IconButton(
+                    icon: Icon(Icons.arrow_back, color: Colors.white),
+                    onPressed: () => Navigator.of(context).pop(),
+                  ),
                   bottom: const TabBar(
                     tabs: [
                       Tab(
@@ -95,11 +99,22 @@ class ResepPage extends StatelessWidget {
                         Padding(
                           padding: const EdgeInsets.all(10.0),
                           child: ElevatedButton(
+                            style: ButtonStyle(
+                                backgroundColor:
+                                    MaterialStateProperty.all<Color>(
+                                        Colors.green),
+                                shape: MaterialStateProperty.all<
+                                        RoundedRectangleBorder>(
+                                    RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(18.0),
+                                ))),
                             onPressed: () => {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => ChooseStorePage(bahan: getBahan(),)),
+                                    builder: (context) => ChooseStorePage(
+                                          bahan: getBahan(),
+                                        )),
                               ),
                             },
                             child: Text("Shop Ingredients"),

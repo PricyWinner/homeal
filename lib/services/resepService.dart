@@ -3,11 +3,21 @@ part of 'services.dart';
 List<BahanClass> listBahan = [];
 List<BahanAmountClass> listBahanAmount = [];
 List<ItemClass> listResep = [];
-List<String> idBahan = ['9t6vG9vZNwlxbfa9OCzG', 'Ng4RYOUk3Xg3iUtXNFyd'];
+List<String> idBahan = [
+  '9t6vG9vZNwlxbfa9OCzG',
+  'Ng4RYOUk3Xg3iUtXNFyd',
+  'MkMmfe5dyxpbOGmvVBxy',
+  'm0MJv9sUyuSTrL8q4YMo',
+  'jEmzPJfl45VJ96q9Lllr',
+  'KO1ylfzV0aipikNkEr5q'
+];
 List<String> idResep = ['r6JD11SC9fMg78nD6JGy'];
 var bahan_id;
 
 Future<void> firebaseinit() async {
+  listBahan.clear();
+  listBahanAmount.clear();
+  listResep.clear();
   FirebaseApp defaultApp = await Firebase.initializeApp();
   var collection = FirebaseFirestore.instance.collection('bahan');
   for (int i = 0; i < idBahan.length; i++) {

@@ -22,6 +22,10 @@ class _ChooseStorePageState extends State<ChooseStorePage> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
+          leading: IconButton(
+            icon: Icon(Icons.arrow_back, color: Colors.white),
+            onPressed: () => Navigator.of(context).pop(),
+          ),
           title: const Text('Choose Store'),
         ),
         // body: GoogleMap(
@@ -68,6 +72,7 @@ class _ChooseStorePageState extends State<ChooseStorePage> {
                         context,
                         MaterialPageRoute(
                           builder: (context) => ShopIngredients(
+                            currentStore: storeDB.elementAt(0),
                             bahan: widget.bahan,
                           ),
                         ),
@@ -91,6 +96,17 @@ class _ChooseStorePageState extends State<ChooseStorePage> {
                     width: 70,
                   ),
                   title: Text('Hero - Mall Taman Anggrek '),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ShopIngredients(
+                          currentStore: storeDB.elementAt(1),
+                          bahan: widget.bahan,
+                        ),
+                      ),
+                    );
+                  },
                 ),
               ),
             ),
@@ -108,6 +124,17 @@ class _ChooseStorePageState extends State<ChooseStorePage> {
                     width: 70,
                   ),
                   title: Text('Ranch Market Hublife'),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ShopIngredients(
+                          currentStore: storeDB.elementAt(2),
+                          bahan: widget.bahan,
+                        ),
+                      ),
+                    );
+                  },
                 ),
               ),
             ),
@@ -125,6 +152,17 @@ class _ChooseStorePageState extends State<ChooseStorePage> {
                     width: 70,
                   ),
                   title: Text('The Food Hall - Neo Soho'),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ShopIngredients(
+                          currentStore: storeDB.elementAt(3),
+                          bahan: widget.bahan,
+                        ),
+                      ),
+                    );
+                  },
                 ),
               ),
             ),
@@ -142,6 +180,17 @@ class _ChooseStorePageState extends State<ChooseStorePage> {
                     width: 70,
                   ),
                   title: Text('Farmers Market Wang Plaza'),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ShopIngredients(
+                          currentStore: storeDB.elementAt(4),
+                          bahan: widget.bahan,
+                        ),
+                      ),
+                    );
+                  },
                 ),
               ),
             ),

@@ -23,6 +23,8 @@ class _MyAppState extends State<MyApp> {
 
   get bahan => null;
 
+  get TotalPrice => null;
+
   @override
   void initState() {
     // firebaseinit();
@@ -33,13 +35,15 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     firebaseinit();
-
+    generateStore();
     return MaterialApp(initialRoute: '/', routes: {
       '/': (context) => HomePage(),
       '/resep': (context) => ResepPage(selectedResep: selectedResep),
       '/store': (context) => ChooseStorePage(
             bahan: bahan,
           ),
+          '/cart': (context) => Cartpage(),
+      '/payment': (context) => PaymentPage(TotalPrice: TotalPrice),
     });
   }
 }

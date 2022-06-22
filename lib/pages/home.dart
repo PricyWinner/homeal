@@ -58,37 +58,192 @@ class _HomePageState extends State<HomePage> {
                     padding: const EdgeInsets.all(8.0),
                     child: RecomendedCarousel(),
                   ),
-                  
-                  // Padding(
-                  //   padding: const EdgeInsets.all(8.0),
-                  //   child: Text(
-                  //     "Popular Nowadays",
-                  //     style: TextStyle(fontSize: 18),
-                  //   ),
-                  // ),
-                  // Padding(
-                  //   padding: const EdgeInsets.all(8.0),
-                  //   child: RecomendedCarousel(),
-                  // ),
-                  // Padding(
-                  //   padding: const EdgeInsets.all(8.0),
-                  //   child: Text(
-                  //     "Order Again",
-                  //     style: TextStyle(fontSize: 18),
-                  //   ),
-                  // ),
-                  // Padding(
-                  //   padding: const EdgeInsets.all(8.0),
-                  //   child: RecomendedCarousel(),
-                  // ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      "Popular Nowadays",
+                      style: TextStyle(fontSize: 18),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: RecomendedCarousel(),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      "Order Again",
+                      style: TextStyle(fontSize: 18),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: RecomendedCarousel(),
+                  ),
                 ],
                 crossAxisAlignment: CrossAxisAlignment.start,
               ),
             ),
-            Text("gferencgh"),
-            Text("fernch"),
-            Text("fernch"),
-            Text("fernch"),
+            SingleChildScrollView(
+              child: Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      "Recommended",
+                      style: TextStyle(fontSize: 18),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: RecomendedCarousel(),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      "Popular Nowadays",
+                      style: TextStyle(fontSize: 18),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: RecomendedCarousel(),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      "Order Again",
+                      style: TextStyle(fontSize: 18),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: RecomendedCarousel(),
+                  ),
+                ],
+                crossAxisAlignment: CrossAxisAlignment.start,
+              ),
+            ),
+            SingleChildScrollView(
+              child: Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      "Recommended",
+                      style: TextStyle(fontSize: 18),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: RecomendedCarousel(),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      "Popular Nowadays",
+                      style: TextStyle(fontSize: 18),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: RecomendedCarousel(),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      "Order Again",
+                      style: TextStyle(fontSize: 18),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: RecomendedCarousel(),
+                  ),
+                ],
+                crossAxisAlignment: CrossAxisAlignment.start,
+              ),
+            ),
+            SingleChildScrollView(
+              child: Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      "Recommended",
+                      style: TextStyle(fontSize: 18),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: RecomendedCarousel(),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      "Popular Nowadays",
+                      style: TextStyle(fontSize: 18),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: RecomendedCarousel(),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      "Order Again",
+                      style: TextStyle(fontSize: 18),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: RecomendedCarousel(),
+                  ),
+                ],
+                crossAxisAlignment: CrossAxisAlignment.start,
+              ),
+            ),
+            SingleChildScrollView(
+              child: Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      "Recommended",
+                      style: TextStyle(fontSize: 18),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: RecomendedCarousel(),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      "Popular Nowadays",
+                      style: TextStyle(fontSize: 18),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: RecomendedCarousel(),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      "Order Again",
+                      style: TextStyle(fontSize: 18),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: RecomendedCarousel(),
+                  ),
+                ],
+                crossAxisAlignment: CrossAxisAlignment.start,
+              ),
+            ),
           ],
         ),
         bottomNavigationBar: BottomNavBar(),
@@ -97,76 +252,76 @@ class _HomePageState extends State<HomePage> {
   }
 }
 
-class BottomNavBar extends StatefulWidget {
-  BottomNavBar({Key? key}) : super(key: key);
+// class BottomNavBar extends StatefulWidget {
+//   BottomNavBar({Key? key}) : super(key: key);
 
-  @override
-  State<BottomNavBar> createState() => _BottomNavBarState();
-}
+//   @override
+//   State<BottomNavBar> createState() => _BottomNavBarState();
+// }
 
-class _BottomNavBarState extends State<BottomNavBar> {
-  int _selectedIndex = 0;
-  static const TextStyle optionStyle =
-      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
-  static const List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'Index 0: Home',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 1: Store',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 2: History',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 2: profile',
-      style: optionStyle,
-    ),
-  ];
+// class _BottomNavBarState extends State<BottomNavBar> {
+//   int _selectedIndex = 0;
+//   static const TextStyle optionStyle =
+//       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
+//   static const List<Widget> _widgetOptions = <Widget>[
+//     Text(
+//       'Index 0: Home',
+//       style: optionStyle,
+//     ),
+//     Text(
+//       'Index 1: Cart',
+//       style: optionStyle,
+//     ),
+//     Text(
+//       'Index 2: History',
+//       style: optionStyle,
+//     ),
+//     Text(
+//       'Index 2: profile',
+//       style: optionStyle,
+//     ),
+//   ];
 
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-      if (_selectedIndex == 3) {
-        print(listResep.elementAt(0).category);
-        // Navigator.push(
-        //   context,
-        //   MaterialPageRoute(
-        //     builder: (context) => ChooseStorePage(),
-        //   ),
-        // );
-      }
-    });
-  }
+//   void _onItemTapped(int index) {
+//     setState(() {
+//       _selectedIndex = index;
+//       if (_selectedIndex == 1) {
+//         // print(listResep.elementAt(0).category);
+//         Navigator.push(
+//           context,
+//           MaterialPageRoute(
+//             builder: (context) => Cartpage(),
+//           ),
+//         );
+//       }
+//     });
+//   }
 
-  @override
-  Widget build(BuildContext context) {
-    return BottomNavigationBar(
-      type: BottomNavigationBarType.fixed,
-      items: const <BottomNavigationBarItem>[
-        BottomNavigationBarItem(
-          icon: Icon(Icons.home),
-          label: 'Home',
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.store),
-          label: 'Store',
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.history),
-          label: 'History',
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.person),
-          label: 'rofile',
-        ),
-      ],
-      currentIndex: _selectedIndex,
-      selectedItemColor: Colors.amber[800],
-      onTap: _onItemTapped,
-    );
-  }
-}
+//   @override
+//   Widget build(BuildContext context) {
+//     return BottomNavigationBar(
+//       type: BottomNavigationBarType.fixed,
+//       items: const <BottomNavigationBarItem>[
+//         BottomNavigationBarItem(
+//           icon: Icon(Icons.home),
+//           label: 'Home',
+//         ),
+//         BottomNavigationBarItem(
+//           icon: Icon(Icons.shop),
+//           label: 'Cart',
+//         ),
+//         BottomNavigationBarItem(
+//           icon: Icon(Icons.history),
+//           label: 'History',
+//         ),
+//         BottomNavigationBarItem(
+//           icon: Icon(Icons.person),
+//           label: 'rofile',
+//         ),
+//       ],
+//       currentIndex: _selectedIndex,
+//       selectedItemColor: Colors.amber[800],
+//       onTap: _onItemTapped,
+//     );
+//   }
+// }
