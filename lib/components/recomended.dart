@@ -47,11 +47,13 @@ class CustomCard extends StatelessWidget {
           ],
         ),
         onTap: () {
-          // print(resepDB);
+          print(listResep.elementAt(0).ingredients.length);
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => ResepPage(),
+              builder: (context) => ResepPage(
+                selectedResep: listResep[index],
+              ),
             ),
           );
         },

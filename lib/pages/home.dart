@@ -58,6 +58,7 @@ class _HomePageState extends State<HomePage> {
                     padding: const EdgeInsets.all(8.0),
                     child: RecomendedCarousel(),
                   ),
+                  
                   // Padding(
                   //   padding: const EdgeInsets.all(8.0),
                   //   child: Text(
