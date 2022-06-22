@@ -1,9 +1,31 @@
 part of 'models.dart';
 
-class ItemResepClass {
-  int id;
+class ItemClass {
+  String id;
   String imageURL;
   String title;
-  String Category;
-  ItemResepClass(this.id, this.imageURL, this.title, this.Category);
+  String category;
+  var steps;
+  List<BahanAmountClass> ingredients;
+  ItemClass(this.id, this.imageURL, this.title, this.category, this.steps,
+      this.ingredients);
 }
+
+class BahanClass {
+  String id;
+  String name;
+  int price;
+  String weight;
+  BahanClass(this.id, this.name, this.price, this.weight);
+}
+
+class BahanAmountClass {
+  String bahanID;
+  String amount;
+  BahanAmountClass(this.bahanID, this.amount);
+}
+
+// List<ItemClass> listItems = [];
+// List<BahanClass> listBahan() {
+//   return gameDB;
+// }

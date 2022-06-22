@@ -12,6 +12,10 @@ class ResepPage extends StatelessWidget {
             appBar: AppBar(
               bottom: const TabBar(
                   tabs: [Tab(text: "Ingredients"), Tab(text: "Recipes")]),
+              leading: IconButton(
+                icon: Icon(Icons.arrow_back, color: Colors.white),
+                onPressed: () => Navigator.of(context).pop(),
+              ),
               title: Text('Resep'),
             ),
             body: TabBarView(
@@ -32,6 +36,7 @@ class ResepPage extends StatelessWidget {
                     'Rebus daging dan dengkul sapi hingga setengah lunak. Potong daging sesuai selera. Sisihkan'),
               ],
             ),
+            
           )),
     );
   }

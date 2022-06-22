@@ -1,10 +1,16 @@
 part of 'components.dart';
-List<String> item = ["Rawon", "gulai", "nasi goreng", "mie goreng"];
-class RecomendedCarousel extends StatelessWidget {
-  RecomendedCarousel({Key? key}) : super(key: key);
 
+// List<String> item = ["Rawon", "gulai", "nasi goreng", "mie goreng"];
+
+//
+
+// ignore: must_be_immutable
+class RecomendedCarousel extends StatelessWidget {
+  // List<ItemClass> resepDB = listResep;
+  // List<ItemClass> listResepDB = listResep;
+  RecomendedCarousel({Key? key}) : super(key: key);
   List<Widget> cards = new List.generate(
-      item.length,
+      listResep.length,
       (index) => new CustomCard(
             index: index,
           ));
@@ -23,7 +29,6 @@ class RecomendedCarousel extends StatelessWidget {
 class CustomCard extends StatelessWidget {
   final index;
   CustomCard({Key? key, required this.index}) : super(key: key);
-  
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -31,17 +36,18 @@ class CustomCard extends StatelessWidget {
         child: Column(
           children: [
             Image.network(
-              "https://i.imgur.com/7zkwrpk.jpg",
+              listResep.elementAt(index).imageURL,
               fit: BoxFit.cover,
               width: 170,
             ),
             Text(
-              item[index],
+              listResep.elementAt(index).title,
               style: TextStyle(fontSize: 18),
             )
           ],
         ),
         onTap: () {
+          // print(resepDB);
           Navigator.push(
             context,
             MaterialPageRoute(
