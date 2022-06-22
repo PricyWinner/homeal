@@ -20,19 +20,6 @@ class ResepPage extends StatelessWidget {
     return bahan;
   }
 
-  // List<String> getAmount() {
-  //    List<String> amount = [];
-
-  //    for (int ii = 0; ii < getBahan().length; ii++) {
-  //       if (bahandb.elementAt(ii).id ==
-  //           selectedResep.ingredients.elementAt(i).bahanID) {
-  //         bahan.add(bahandb.elementAt(ii));
-  //         amount.add(selectedResep.ingredients.elementAt(i).amount);
-  //       }
-  //     }
-  //   return amount;
-  // }
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -56,17 +43,20 @@ class ResepPage extends StatelessWidget {
                   children: [
                     Column(
                       children: [
-                        Image.network(
-                          selectedResep.imageURL,
-                          fit: BoxFit.cover,
-                          width: 350,
+                        Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: Image.network(
+                            selectedResep.imageURL,
+                            fit: BoxFit.cover,
+                            width: 350,
+                          ),
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Padding(
                               padding: const EdgeInsets.all(10.0),
-                              child: Text("Rawon",
+                              child: Text(selectedResep.title,
                                   style: TextStyle(
                                       fontSize: 26,
                                       fontWeight: FontWeight.bold)),
@@ -80,23 +70,35 @@ class ResepPage extends StatelessWidget {
                           ],
                         ),
                         Expanded(
-                          child: ListView.builder(
-                              padding: const EdgeInsets.all(8),
-                              itemCount: selectedResep.ingredients.length,
-                              itemBuilder: (BuildContext context, int index) {
-                                return Container(
-                                    height: 50,
-                                    // color: Colors.amber[colorCodes[index]],
-                                    child: Align(
-                                      alignment: Alignment.centerLeft,
-                                      child: Text(
-                                          getBahan().elementAt(index).weight +
-                                              " " +
-                                              getBahan().elementAt(index).name,
-                                          textAlign: TextAlign.left),
-                                    ));
-                              }),
+                          child: Padding(
+                            padding: const EdgeInsets.all(20.0),
+                            child: ListView.builder(
+                                padding: const EdgeInsets.all(8),
+                                itemCount: selectedResep.ingredients.length,
+                                itemBuilder: (BuildContext context, int index) {
+                                  return Container(
+                                      height: 50,
+                                      // color: Colors.amber[colorCodes[index]],
+                                      child: Align(
+                                        alignment: Alignment.centerLeft,
+                                        child: Text(
+                                            getBahan().elementAt(index).weight +
+                                                " " +
+                                                getBahan()
+                                                    .elementAt(index)
+                                                    .name,
+                                            textAlign: TextAlign.left),
+                                      ));
+                                }),
+                          ),
                         ),
+                        Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: ElevatedButton(
+                            onPressed: () => {},
+                            child: Text("Shop Ingredients"),
+                          ),
+                        )
                       ],
                     ),
                     Column(
