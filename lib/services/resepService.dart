@@ -47,7 +47,7 @@ Future<void> firebaseinit() async {
       var imageURL = data['imageURL'].toString();
       var category = data['category'].toString();
       var title = data['title'].toString();
-      var steps = data['steps'];
+      var stepsraw = data['steps'] as List<dynamic>;
       var ingredients = data['ingredients'];
 
       for (int ii = 0; ii < ingredients.length; ii++) {
@@ -55,6 +55,8 @@ Future<void> firebaseinit() async {
             ingredients[ii]['bahanID'].toString(),
             ingredients[ii]['amount'].toString()));
       }
+
+      List<String> steps = stepsraw.cast<String>();
       listResep.add(
           ItemClass(id, imageURL, title, category, steps, listBahanAmount));
     }

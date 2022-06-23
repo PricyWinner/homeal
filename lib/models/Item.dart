@@ -5,7 +5,7 @@ class ItemClass {
   String imageURL;
   String title;
   String category;
-  var steps;
+  List<String> steps;
   List<BahanAmountClass> ingredients;
   ItemClass(this.id, this.imageURL, this.title, this.category, this.steps,
       this.ingredients);

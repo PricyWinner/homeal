@@ -130,12 +130,23 @@ class ResepPage extends StatelessWidget {
                           width: 350,
                         ),
                         Padding(
-                          padding: EdgeInsets.only(left: 35.0, top: 20.0),
+                          padding: EdgeInsets.all(10.0),
                           child: Align(
                             alignment: Alignment.centerLeft,
-                            child: Text(
-                              selectedResep.steps.toString(),
-                              textAlign: TextAlign.left,
+                            child: Column(
+                              children: [
+                                // for (var step in selectedResep.steps) Text(step)
+                                // new List.generate(selectedResep.steps.length, (index) => Text(index.to+ ' ' + selectedResep.steps.elementAt(index)))
+                                for (var i = 0;
+                                    i < selectedResep.steps.length;
+                                    i++)
+                                  Text(
+                                    (i + 1).toString() +
+                                        '. ' +
+                                        selectedResep.steps.elementAt(i) +
+                                        '\n',
+                                  )
+                              ],
                             ),
                           ),
                         ),
