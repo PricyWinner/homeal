@@ -20,8 +20,10 @@ class _PaymentPageState extends State<PaymentPage> {
               {
                 cartDB.elementAt(i).done = true,
               },
-            Navigator.of(context).pop(),
-            selectedIndex = 0,
+            Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(builder: (BuildContext context) => Cartpage()),
+            ),
           },
         ),
         title: Text('Payment'),

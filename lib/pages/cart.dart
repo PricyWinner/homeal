@@ -145,7 +145,7 @@ class _CartpageState extends State<Cartpage> {
                                       HistoryDB.add(HistoryClass(
                                           cartTemp, new DateTime.now())),
                                       // selectedIndex = 0,
-                                      Navigator.push(
+                                      Navigator.pushReplacement(
                                         context,
                                         MaterialPageRoute(
                                             builder: (BuildContext context) =>
