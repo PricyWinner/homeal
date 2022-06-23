@@ -12,7 +12,8 @@ class HomePage extends StatefulWidget {
 // }
 
 class _HomePageState extends State<HomePage> {
-  // List<ItemClass> listResep = resepDB();
+  List<ItemClass> listReseplocal = [];
+  
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
