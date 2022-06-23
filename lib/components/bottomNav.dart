@@ -9,7 +9,7 @@ class BottomNavBar extends StatefulWidget {
 
 class _BottomNavBarState extends State<BottomNavBar> {
   int _selectedIndex = selectedIndex;
- 
+
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
@@ -50,12 +50,11 @@ class _BottomNavBarState extends State<BottomNavBar> {
         selectedIndex = 2;
         Navigator.pushReplacement(
             context, MaterialPageRoute(builder: (context) => HistoryPage()));
+      } else if (_selectedIndex == 3) {
+        selectedIndex = 3;
+        Navigator.pushReplacement(
+            context, MaterialPageRoute(builder: (context) => ProfileScreen()));
       }
-      //else if (_selectedIndex == 3) {
-      //   selectedIndex = 1;
-      //   // Navigator.push(
-      //   //     context, MaterialPageRoute(builder: (context) => Cartpage()));
-      // }
     });
   }
 

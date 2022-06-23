@@ -113,7 +113,7 @@ class _CartpageState extends State<Cartpage> {
                     Row(
                       children: [
                         Padding(
-                          padding: const EdgeInsets.fromLTRB(0, 10, 0, 0),
+                          padding: const EdgeInsets.fromLTRB(10, 10, 0, 0),
                           child: Text(
                             'Total price:',
                             style: TextStyle(

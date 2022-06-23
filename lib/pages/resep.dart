@@ -51,8 +51,9 @@ class ResepPage extends StatelessWidget {
                           padding: const EdgeInsets.all(10.0),
                           child: Image.network(
                             selectedResep.imageURL,
-                            fit: BoxFit.cover,
+                            fit: BoxFit.fill,
                             width: 350,
+                            height: 200,
                           ),
                         ),
                         Row(
@@ -78,7 +79,7 @@ class ResepPage extends StatelessWidget {
                             padding: const EdgeInsets.all(20.0),
                             child: ListView.builder(
                                 padding: const EdgeInsets.all(8),
-                                itemCount: selectedResep.ingredients.length,
+                                itemCount: getBahan().length,
                                 itemBuilder: (BuildContext context, int index) {
                                   return Container(
                                       height: 50,

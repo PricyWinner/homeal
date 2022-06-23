@@ -21,7 +21,7 @@ class _HistoryPageState extends State<HistoryPage> {
     if (HistoryDB.isEmpty) {
       // return Text("History Is Empty");
       return Image.network(
-        'https://i.imgur.com/7YSaYoJ.jpg',
+        'https://i.imgur.com/S8RaCOf.png',
       );
     } else {
       return ListView.builder(
@@ -97,7 +97,7 @@ class _HistoryPageState extends State<HistoryPage> {
     return MaterialApp(
       home: Scaffold(
           appBar: AppBar(
-            title: Text("Cart"),
+            title: Text("History"),
           ),
           bottomNavigationBar: BottomNavBar(),
           body: Column(

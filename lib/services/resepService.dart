@@ -55,6 +55,7 @@ Future<void> firebaseinit() async {
 
   var resepCollection = FirebaseFirestore.instance.collection('masakan');
   for (int i = 0; i < idResep.length; i++) {
+    listBahanAmount.clear();
     var docSnapshot = await resepCollection.doc(idResep[i]).get();
     if (docSnapshot.exists) {
       Map<String, dynamic> data = docSnapshot.data()!;
@@ -66,14 +67,16 @@ Future<void> firebaseinit() async {
       var title = data['title'].toString();
       var stepsraw = data['steps'] as List<dynamic>;
       var ingredients = data['ingredients'];
-
+      print(title);
       for (int ii = 0; ii < ingredients.length; ii++) {
         listBahanAmount.add(BahanAmountClass(
             ingredients[ii]['bahanID'].toString(),
             ingredients[ii]['amount'].toString()));
+        print(listBahanAmount.elementAt(ii).bahanID);
       }
 
       List<String> steps = stepsraw.cast<String>();
+      print(listBahanAmount.length.toString());
       listResep.add(
           ItemClass(id, imageURL, title, category, steps, listBahanAmount));
     }

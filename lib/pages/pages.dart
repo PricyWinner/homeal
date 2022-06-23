@@ -14,3 +14,4 @@ part 'shopIngredients.dart';
 part 'cart.dart';
 part 'payment.dart';
 part 'history.dart';
+part 'profile.dart';
