@@ -9,9 +9,26 @@ List<String> idBahan = [
   'MkMmfe5dyxpbOGmvVBxy',
   'm0MJv9sUyuSTrL8q4YMo',
   'jEmzPJfl45VJ96q9Lllr',
-  'KO1ylfzV0aipikNkEr5q'
+  'KO1ylfzV0aipikNkEr5q',
+  'EBaJUokPulUSK3lwKB2L',
+  'PRqG7bQPAhGlWtuBaBGE',
+  'U30v11PJjRa44xD0Z3H4',
+  'hTcueW6qRfr36Dg5vaio',
+  'iJM8ZyjOgN7DeJvDYrvn',
+  'jEmzPJfl45VJ96q9Lllr',
+  'kNUaJDqT32eDUwk8Jjno',
+  'kfPlyeeUtw0Un4Cj2ML7',
+  'l2bvKNMU7KYxAUmhMxgy',
+  'm0MJv9sUyuSTrL8q4YMo',
+  'ouKuoCdJWGmHdQY67nyv',
+  'tMswcpEuExWg9JKzlnoN'
 ];
-List<String> idResep = ['r6JD11SC9fMg78nD6JGy'];
+List<String> idResep = [
+  'r6JD11SC9fMg78nD6JGy',
+  'TPyrSGx9CzCysbBWhZNX',
+  'RKHY78FD65hYdGKDzjUc',
+  '6wyfS3nfGH0WNn8YbABZ'
+];
 var bahan_id;
 
 Future<void> firebaseinit() async {

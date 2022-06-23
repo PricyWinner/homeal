@@ -41,7 +41,7 @@ class ResepPage extends StatelessWidget {
                       ),
                     ],
                   ),
-                  title: const Text('Voucher'),
+                  title: Text(selectedResep.title),
                 ),
                 body: TabBarView(
                   children: [
@@ -122,35 +122,40 @@ class ResepPage extends StatelessWidget {
                         )
                       ],
                     ),
-                    Column(
-                      children: [
-                        Image.network(
-                          selectedResep.imageURL,
-                          fit: BoxFit.cover,
-                          width: 350,
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(10.0),
-                          child: Align(
-                            alignment: Alignment.centerLeft,
-                            child: Column(
-                              children: [
-                                // for (var step in selectedResep.steps) Text(step)
-                                // new List.generate(selectedResep.steps.length, (index) => Text(index.to+ ' ' + selectedResep.steps.elementAt(index)))
-                                for (var i = 0;
-                                    i < selectedResep.steps.length;
-                                    i++)
-                                  Text(
-                                    (i + 1).toString() +
-                                        '. ' +
-                                        selectedResep.steps.elementAt(i) +
-                                        '\n',
-                                  )
-                              ],
+                    SingleChildScrollView(
+                      child: Column(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Image.network(
+                              selectedResep.imageURL,
+                              fit: BoxFit.cover,
+                              width: 250,
                             ),
                           ),
-                        ),
-                      ],
+                          Padding(
+                            padding: EdgeInsets.all(20.0),
+                            child: Align(
+                              alignment: Alignment.centerLeft,
+                              child: Column(
+                                children: [
+                                  // for (var step in selectedResep.steps) Text(step)
+                                  // new List.generate(selectedResep.steps.length, (index) => Text(index.to+ ' ' + selectedResep.steps.elementAt(index)))
+                                  for (var i = 0;
+                                      i < selectedResep.steps.length;
+                                      i++)
+                                    Text(
+                                      (i + 1).toString() +
+                                          '. ' +
+                                          selectedResep.steps.elementAt(i) +
+                                          '\n',
+                                    )
+                                ],
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                     )
                   ],
                 ))));

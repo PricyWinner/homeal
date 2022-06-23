@@ -19,7 +19,10 @@ class _HistoryPageState extends State<HistoryPage> {
 
   Widget generateList() {
     if (HistoryDB.isEmpty) {
-      return Text("Cart is empty");
+      // return Text("History Is Empty");
+      return Image.network(
+        'https://i.imgur.com/7YSaYoJ.jpg',
+      );
     } else {
       return ListView.builder(
           itemCount: HistoryDB.length,
@@ -65,10 +68,21 @@ class _HistoryPageState extends State<HistoryPage> {
                                     .elementAt(i)
                                     .done = false,
                               },
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => Cartpage()))
+                            // Navigator.push(
+                            //     context,
+                            //     MaterialPageRoute(
+                            //         builder: (context) => Cartpage()))
+                            // Fluttertoast.showToast(
+                            //     msg: "Cart Added",
+                            //     toastLength: Toast.LENGTH_SHORT,
+                            //     gravity: ToastGravity.CENTER,
+                            //     timeInSecForIosWeb: 1,
+                            //     backgroundColor: Colors.red,
+                            //     textColor: Colors.white,
+                            //     fontSize: 16.0)
+                            ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                              content: Text("Cart Added"),
+                            ))
                           },
                       child: Text('Order Again')),
                 ),

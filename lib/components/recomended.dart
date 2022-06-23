@@ -33,10 +33,14 @@ class CustomCard extends StatelessWidget {
       child: InkWell(
         child: Column(
           children: [
-            Image.network(
-              listResep.elementAt(index).imageURL,
-              fit: BoxFit.cover,
-              width: 170,
+            Container(
+              width: 180,
+              height: 115,
+              child: Image.network(
+                listResep.elementAt(index).imageURL,
+                fit: BoxFit.cover,
+                width: 170,
+              ),
             ),
             Text(
               listResep.elementAt(index).title,

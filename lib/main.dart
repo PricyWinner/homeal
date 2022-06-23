@@ -42,7 +42,7 @@ class _MyAppState extends State<MyApp> {
       '/store': (context) => ChooseStorePage(
             bahan: bahan,
           ),
-          '/cart': (context) => Cartpage(),
+      '/cart': (context) => Cartpage(),
       '/payment': (context) => PaymentPage(TotalPrice: TotalPrice),
     });
   }

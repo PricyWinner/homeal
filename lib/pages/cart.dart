@@ -20,11 +20,20 @@ class _CartpageState extends State<Cartpage> {
     }
   }
 
+  @override
+  void initState() {
+    super.initState();
+    print("inCart");
+  }
+
   Widget generateList() {
     getCart();
     if (cartTemp.isEmpty) {
       totalPrice = 0;
-      return Text("Cart is empty");
+      // return Text("Cart is empty");
+      return Image.network(
+        'https://i.imgur.com/7YSaYoJ.jpg',
+      );
     } else {
       // getCart();
       totalPrice = getTotalPrice();
@@ -131,16 +140,22 @@ class _CartpageState extends State<Cartpage> {
                               borderRadius: BorderRadius.circular(18.0),
                             ))),
                             onPressed: () => {
-                                  HistoryDB.add(HistoryClass(
-                                      cartTemp, new DateTime.now())),
-                                  // selectedIndex = 0,
-                                  Navigator.pushAndRemoveUntil(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (BuildContext context) =>
-                                              PaymentPage(
-                                                  TotalPrice: getTotalPrice())),
-                                      ModalRoute.withName('/')),
+                                  if (cartTemp.isNotEmpty)
+                                    {
+                                      HistoryDB.add(HistoryClass(
+                                          cartTemp, new DateTime.now())),
+                                      // selectedIndex = 0,
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (BuildContext context) =>
+                                                PaymentPage(
+                                                    TotalPrice:
+                                                        getTotalPrice())),
+                                      ),
+                                    }
+                                  else
+                                    {}
                                 },
                             child: Text(
                                 '                            Shop now                            ')),
